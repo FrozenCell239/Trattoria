@@ -53,11 +53,13 @@ main{
 
 footer{
     background-color: var(--brand-color);
-    font: 1rem var(--brand-font);
+    font: 1.5rem var(--brand-font);
     color: white;
     width: 100vw;
     display: flex;
     justify-content: center;
+    padding: 20px;
+
 }
 
 li{
@@ -131,8 +133,8 @@ div.services-element{
     stroke-width: 0px;
     fill: currentColor;
     display: inline-block;
-    width: 1rem;
-    height: 1rem;
+    width: 1.8rem;
+    height: 1.8rem;
     vertical-align: -0.15em;
 }
 
@@ -219,8 +221,30 @@ div.services-element{
 
 #contact{
     background-color: white;
-    color: var(--info-color);display: grid;
+    color: var(--info-color);
+    display: grid;
     column-gap: 50px;
     row-gap: 20px;
     grid-template-columns: 40% 60%;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#contact > div{
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.8rem;
+    justify-content: space-around;
+}
+
+#contact > img{
+    grid-column: 2;
+    width: 600px;
+    height: auto;
+}
+
+#contact > h2{
+    grid-column: span 2;
 }
