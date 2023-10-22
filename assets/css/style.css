@@ -54,6 +54,7 @@ main{
 footer{
     background-color: var(--brand-color);
     font: 1.5rem var(--brand-font);
+    font-weight: bold;
     color: white;
     width: 100vw;
     display: flex;
