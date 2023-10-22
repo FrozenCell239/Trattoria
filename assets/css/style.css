@@ -80,6 +80,7 @@ h1{
     place-self: center;
     color: white;
     font-family: var(--brand-font);
+    animation: flip 2s;
 }
 
 h2{
@@ -187,6 +188,7 @@ div.services-element{
     margin: 10%;
     grid-column: 2;
     grid-row: 3;
+    animation: unfade 0.5s 1s backwards;
 }
 
 #menu{
@@ -251,4 +253,20 @@ div.services-element{
 
 #contact > h2{
     grid-column: span 2;
+}
+
+/* Animation */
+@keyframes flip{
+    0%{
+        transform: rotateY(90deg);
+    }
+}
+
+@keyframes unfade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
