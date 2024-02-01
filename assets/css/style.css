@@ -1,16 +1,15 @@
-/*
-    All theses properties might not be sorted at all.
-    Feel free to use Ctrl + F.
-*/
-
-/* Re-usables */
+/* Generals */
 @font-face{
     font-family: 'Pacifico';
     src: url('../fonts/Pacifico/Pacifico-Regular.ttf') format('truetype');
 }
-
+@font-face{
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+}
 :root{
     /* Fonts */
+    --main-font: Roboto, Arial, Helvetica, sans-serif;
     --brand-font: 'Pacifico';
 
     /* Font colors */
@@ -18,15 +17,42 @@
     --brand-color-2: #5c0000;
     --info-color: #009900;
 }
-
-/* HTML tags customization */
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--main-font);
     font-size: large;
     margin: 0;
     padding: 0;
 }
+main{
+    width: 100vw;
+    right: 0;
+    left: 0;
+}
+li{
+    display: inline;
+    margin-left: 20px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+h1{
+    font-size: 5rem;
+    grid-column: 2;
+    grid-row: 2;
+    place-self: center;
+    color: white;
+    font-family: var(--brand-font);
+    animation: flip 2s;
+}
+h2{
+    font: 2rem var(--brand-font);
+}
+h3{
+    font: 1.8rem var(--brand-font);
+}
 
+/* Navigation bar */
 header{
     background-color: var(--brand-color);
     border: solid 1px black;
@@ -40,127 +66,11 @@ header{
     padding-top: 1%;
     padding-bottom: 1%;
 }
-
 nav{
     margin-right: 50px;
 }
 
-main{
-    width: 100vw;
-    right: 0;
-    left: 0;
-}
-
-footer{
-    background-color: var(--brand-color);
-    font: 1.5rem var(--brand-font);
-    font-weight: bold;
-    color: white;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    padding-bottom: 20px;
-    padding-top: 20px;
-
-}
-
-li{
-    display: inline;
-    margin-left: 20px;
-}
-
-a{
-    text-decoration: none;
-    color: white;
-}
-
-h1{
-    font-size: 5rem;
-    grid-column: 2;
-    grid-row: 2;
-    place-self: center;
-    color: white;
-    font-family: var(--brand-font);
-    animation: flip 2s;
-}
-
-h2{
-    font: 2rem var(--brand-font);
-}
-
-h3{
-    font: 1.8rem var(--brand-font);
-}
-
-article{
-    border: solid 1px black;
-}
-
-
-article > h2{
-    font-weight: bold;
-    grid-row: 1;
-    justify-self: center;
-}
-
-/* Customization by class */
-.dish-type{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.dish-type > img{
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-.dish-type > span{
-    width: 100%;
-    text-align: justify;
-    margin-top: 10px;
-}
-
-.dish-type > h3{
-    color: var(--info-color);
-}
-
-.services-element{
-    width: 450px;
-    height: 300px;
-    background-color: var(--brand-color-2);
-    justify-self: center;
-    text-align: center;
-}
-
-div.services-element{
-    border: solid 2px #490000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.icon{
-    stroke: unset;
-    stroke-width: 0px;
-    fill: currentColor;
-    display: inline-block;
-    width: 1.8rem;
-    height: 1.8rem;
-    vertical-align: -0.15em;
-}
-
-/*  Customization by id */
-#brand-logo{
-    font-family: var(--brand-font);
-    font: 1.5rem var(--brand-font);
-    font-weight: bold;
-    color: white;
-    margin-left: 50px;
-}
-
+/* Landing section */
 #landing{
     height: 100vh;
     width: 100vw;
@@ -173,8 +83,7 @@ div.services-element{
     grid-template-columns: 15% 70% 15%;
     grid-template-rows: 20% 40% 40%;
 }
-
-#landing > a{
+#landing a{
     background-color: var(--brand-color);
     border: solid 1px black;
     color: white;
@@ -191,7 +100,38 @@ div.services-element{
     grid-row: 3;
     animation: unfade 0.5s 1s backwards;
 }
+#brand-logo{
+    font-family: var(--brand-font);
+    font: 1.5rem var(--brand-font);
+    font-weight: bold;
+    color: white;
+    margin-left: 50px;
+}
+@keyframes flip{
+    0%{
+        transform: rotateY(90deg);
+    }
+}
+@keyframes unfade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 
+/* Trattoria's informations section */
+article{
+    border: solid 1px black;
+}
+article h2{
+    font-weight: bold;
+    grid-row: 1;
+    justify-self: center;
+}
+
+/* Menu article */
 #menu{
     background-color: white;
     display: grid;
@@ -202,12 +142,31 @@ div.services-element{
     padding-right: 20px;
     padding-bottom: 100px;
 }
-
-#menu > h2{
+#menu h2{
     color: var(--info-color);
     grid-column: span 3;
 }
+.dish-type{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.dish-type img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+.dish-type span{
+    width: 100%;
+    text-align: justify;
+    margin-top: 10px;
+}
+.dish-type h3{
+    color: var(--info-color);
+}
 
+/* Services article */
 #services{
     background-color: var(--brand-color);
     color: white;
@@ -220,12 +179,25 @@ div.services-element{
     grid-template-rows: 10% 30% 30% 30%;
     padding-bottom: 50px;
 }
-
-#services > h2{
+#services h2{
     grid-column: span 2;
     margin-top: 50px;
 }
+.services-element{
+    width: 450px;
+    height: 300px;
+    background-color: var(--brand-color-2);
+    justify-self: center;
+    text-align: center;
+}
+div.services-element{
+    border: solid 2px #490000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+/* Contact article */
 #contact{
     background-color: white;
     color: var(--info-color);
@@ -237,37 +209,40 @@ div.services-element{
     padding-left: 50px;
     padding-right: 50px;
 }
-
-#contact > div{
+#contact div{
     grid-column: 1;
     display: flex;
     flex-direction: column;
     font-size: 1.8rem;
     justify-content: space-around;
 }
-
 #contact > img{
     grid-column: 2;
     width: 600px;
     height: auto;
 }
-
-#contact > h2{
+#contact h2{
     grid-column: span 2;
 }
-
-/* Animation */
-@keyframes flip{
-    0%{
-        transform: rotateY(90deg);
-    }
+.icon{
+    stroke: unset;
+    stroke-width: 0px;
+    fill: currentColor;
+    display: inline-block;
+    width: 1.8rem;
+    height: 1.8rem;
+    vertical-align: -0.15em;
 }
 
-@keyframes unfade{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
+/* Footer */
+footer{
+    background-color: var(--brand-color);
+    font: 1.5rem var(--brand-font);
+    font-weight: bold;
+    color: white;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
