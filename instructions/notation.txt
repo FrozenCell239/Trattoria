@@ -1,14 +1,13 @@
---------------------
-Sujet du TP
---------------------
+------------------------
+Sujet du TP :
+------------------------
 
 Réaliser l'intégration de la trattoria San Pietro à partir de la maquette imposée.
 Critères : HTML et CSS natifs, pas de framework.
-Aucun besoin de Javascript pour ce TP.
 
---------------------
+------------------------
 Grille d'évaluation :
---------------------
+------------------------
 
 La navbar est ok. : 1pt
 La police ressemble. : 1pt
@@ -23,9 +22,9 @@ Le responsive du site est propre (avec ou sans medias-queries) : 2pts (1 point p
 
 Note multipliée par 20 et divisée par 12 pour note finale.
 
---------------------
+------------------------
 Modalités de rendu :
---------------------
+------------------------
 
 Rendre le TP le 22 octobre à 23h59 maximum.
 Rendre un fichier texte sur Yparéo avec un lien vers le GitHub de votre projet.
