@@ -1,0 +1,30 @@
+------------------------
+Sujet du TP :
+------------------------
+
+Réaliser l'intégration de la trattoria San Pietro à partir de la maquette imposée.
+Critères : HTML et CSS natifs, pas de framework.
+
+------------------------
+Grille d'évaluation :
+------------------------
+
+La navbar est ok. : 1pt
+La police ressemble. : 1pt
+Les couleurs sont bonnes. : 1pt
+Les images utilisées sont bien celles fournies dans les assets. : 1pt
+La première section prends bien au moins une taille d'écran et ressemble à la maquette. : 1pt
+La deuxième section prends bien au moins une taille d'écran et ressemble à la maquette. : 1pt
+La troisième section prends bien au moins une taille d'écran et ressemble à la maquette. : 1pt
+La quatrième section prends bien au moins une taille d'écran et ressemble à la maquette. : 1pt
+Il y a au moins 2 effets de transitions/animation CSS : 2 pts
+Le responsive du site est propre (avec ou sans medias-queries) : 2pts (1 point presque, 1 point parfait)
+
+Note multipliée par 20 et divisée par 12 pour note finale.
+
+------------------------
+Modalités de rendu :
+------------------------
+
+Rendre le TP le 4 février à 23h59 maximum.
+Rendre un fichier texte sur Yparéo avec un lien vers le GitHub de votre projet.
