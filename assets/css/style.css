@@ -129,6 +129,14 @@ nav ul{
         margin-right: 20px;
     }
 }
+@media screen and (max-width: 398px){
+    nav ul{
+        font-size: 1.2rem;
+    }
+    nav{
+        padding-bottom: 20px;
+    }
+}
 
 /* Landing section */
 #landing{
@@ -164,6 +172,11 @@ nav ul{
     }
     #landing div{
         padding: 15px;
+    }
+}
+@media screen and (max-width: 398px){
+    #landing div{
+        font-size: 1.8rem;
     }
 }
 
