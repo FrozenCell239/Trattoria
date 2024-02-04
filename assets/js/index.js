@@ -6,7 +6,7 @@ window.onscroll = function(){
         document.getElementsByTagName("nav")[0].style.top = "0";
     }
     else{
-        document.getElementsByTagName("nav")[0].style.top = "-100px";
+        document.getElementsByTagName("nav")[0].style.top = "-150px";
     };
     previous_scroll_position = current_scroll_position;
 };

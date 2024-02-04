@@ -74,6 +74,7 @@ h1{
     color: var(--main-color);
     font-family: var(--brand-font);
     animation: flip 2s;
+    text-align: center;
 }
 h2{
     font: 2.2rem var(--brand-font);
@@ -96,8 +97,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 1%;
-    padding-bottom: 1%;
+    padding: 1% 0 1% 0;
     animation: unfade 0.5s 1s backwards;
     transition: top 0.3s;
 }
@@ -112,6 +112,23 @@ nav ul{
     color: var(--main-color);
     margin-left: 50px;
 }
+@media screen and (max-width: 600px){
+    #brand-logo, nav ul{
+        margin: 0;
+        padding: 0;
+    }
+    nav{
+        height: 75px;
+        flex-direction: column;
+        padding: 10px 0 25px 0;
+    }
+    #brand-logo{
+        margin-bottom: 10px;
+    }
+    nav ul{
+        margin-right: 20px;
+    }
+}
 
 /* Landing section */
 #landing{
@@ -123,25 +140,31 @@ nav ul{
     background-size: cover;
     background-position: center;
     display: grid;
-    grid-template-columns: 15% 70% 15%;
-    grid-template-rows: 20% 40% 40%;
+    grid-template: 20% 40% 40% / 15% 70% 15%;
 }
 #landing div{
     background-color: var(--brand-color);
     border: solid 1px black;
     color: var(--main-color);
-    border-radius: 2rem;
+    border-radius: 3rem;
     text-align: center;
     width: auto;
     height: min-content;
     font-weight: bold;
     font-size: 2rem;
-    padding-top: 1%;
-    padding-bottom: 1%;
+    padding: 1% 0 1% 0;
     margin: 10%;
     grid-column: 2;
     grid-row: 3;
     animation: unfade 0.5s 1s backwards;
+}
+@media screen and (max-width: 600px){
+    #landing{
+        background-attachment: local;
+    }
+    #landing div{
+        padding: 15px;
+    }
 }
 
 /* Trattoria's informations section */
@@ -161,12 +184,9 @@ article h2{
 #menu{
     background-color: white;
     display: grid;
-    grid-template-columns: 1/3 1/3 1/3;
-    grid-template-rows: 10% 90%;
+    grid-template: 10% 90% / 1/3 1/3 1/3;
     column-gap: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 100px;
+    padding: 0 20px 100px 20px;
 }
 #menu h2{
     color: var(--info-color);
@@ -191,18 +211,29 @@ article h2{
 .dish-type h3{
     color: var(--info-color);
 }
+@media screen and (max-width: 600px){
+    #menu{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 50px;
+    }
+    #menu h2{
+        text-align: center;
+    }
+    #menu h2, #menu h3{
+        margin-bottom: 0;
+    }
+}
 
 /* Services article */
 #services{
     background-color: var(--brand-color);
     color: var(--main-color);
     display: grid;
-    column-gap: 50px;
     row-gap: 20px;
     justify-content: center;
     align-content: center;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 10% 30% 30% 30%;
+    grid-template: 10% 30% 30% 30% / 50% 50%;
     padding-bottom: 50px;
 }
 #services h2{
@@ -222,18 +253,42 @@ div.services-element{
     justify-content: center;
     align-items: center;
 }
+.services-element:nth-child(2){
+    grid-column: 2;
+    grid-row: 3;
+}
+.services-element:nth-child(3){
+    grid-column: 1;
+    grid-row: 3;
+}
+@media screen and (max-width: 600px){
+    #services{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 0;
+        padding: 0 20px 0 20px;
+    }
+    #services h2{
+        margin: 25px;
+    }
+    .services-element{
+        width: 100%;
+        height: auto;
+    }
+    div.services-element{
+        margin-bottom: 40px;
+    }
+}
 
 /* Contact article */
 #contact{
     background-color: white;
     color: var(--info-color);
     display: grid;
-    column-gap: 50px;
-    row-gap: 20px;
+    gap: 20px 50px;
     grid-template-columns: 40% 60%;
-    padding-bottom: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 0 50px 50px 50px;
 }
 #contact a{
     color: var(--info-color);
@@ -265,6 +320,25 @@ div.services-element{
     height: 1.8rem;
     vertical-align: -0.15em;
 }
+@media screen and (max-width: 600px){
+    #contact{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px 50px 20px;
+    }
+    #contact > iframe{
+        width: 100%;
+        margin-top: -20px;
+    }
+    #contact h2{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    #contact span{
+        margin-bottom: 40px;
+    }
+}
 
 /* Footer */
 footer{
@@ -275,6 +349,5 @@ footer{
     width: 100%;
     display: flex;
     justify-content: center;
-    padding-bottom: 20px;
-    padding-top: 20px;
+    padding: 20px 0 20px 0;
 }
