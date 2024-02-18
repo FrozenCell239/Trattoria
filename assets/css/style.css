@@ -353,12 +353,13 @@ div.services-element{
 #contact a::before{
     background-color: var(--info-color);
 }
-#contact div{
+address{
     grid-column: 1;
     display: flex;
     flex-direction: column;
     font-size: 1.8rem;
     justify-content: space-around;
+    font-style: normal;
 }
 #contact > iframe{
     grid-column: 2;
