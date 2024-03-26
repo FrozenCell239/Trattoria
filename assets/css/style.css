@@ -116,7 +116,7 @@ nav ul{
     color: var(--main-color);
     margin-left: 50px;
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 480px){
     #brand-logo, nav ul{
         margin: 0;
         padding: 0;
@@ -170,7 +170,7 @@ nav ul{
     grid-row: 3;
     animation: unfade 0.5s 1s backwards;
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 480px){
     #landing{
         background-attachment: local;
     }
@@ -263,7 +263,7 @@ article h2{
 .dish-type h3{
     color: var(--info-color);
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 480px){
     #menu{
         display: flex;
         flex-direction: column;
@@ -318,7 +318,7 @@ div.services-element{
     grid-column: 1;
     grid-row: 3;
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 480px){
     #services{
         display: flex;
         flex-direction: column;
@@ -378,7 +378,7 @@ address{
     height: 1.8rem;
     vertical-align: -0.15em;
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 480px){
     #contact{
         display: flex;
         flex-direction: column;
